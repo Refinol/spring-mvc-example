@@ -18,6 +18,9 @@ public class WebApplicationConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**")
                 .addResourceLocations("/resources/");
+        registry
+                .addResourceHandler("/files/**")
+                .addResourceLocations("file:/d:/files/");
     }
 
     @Bean
